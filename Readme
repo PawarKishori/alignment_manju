@@ -8,7 +8,6 @@ Pre-requisite:
 	(Note: git clone anu_resources@10.2.62.172:/home/anu_resources/hindi-parser-repo/create-hindi-parser.git
 	       set the path in bashrc : export rule_based_parser=<path of hindi parser>)
 3. phrase tables (eng-hin and hin-eng)
-4. HINDI_POS_CHUNKER.tgz
 
 
 Note:
@@ -18,17 +17,13 @@ Note:
         crime_and_punishment    crm_pns
         Total_tourism           tourism
 	Total_health		health
-	rashid			rashid	
 )
 
 
 For first time:
 --------------
 1. sudo apt-get install python-networkx
-
-to generate phrase tables into dictionary format
-===============================================
-1. sh run.sh <phrase-table-en-hi> <phrase-table-hi-en> <corpus>
+2. sh run.sh <phrase-table-en-hi> <phrase-table-hi-en> <corpus_name>
 	Ex: sh run.sh phrases_en-hi  phrases_hi-en  physics
 
 Compilation:
@@ -43,13 +38,13 @@ Compilation:
 8. sh compile.sh
 9. cd $rule_based_parser
 10. git pull
-11. sh compile.sh 
+11. compile.sh 
 
 To run alignment:
 ----------------
-sh run_alignment.sh <ENG> <HND> <corpus_name> 
+sh run_alignment.sh <ENG> <HND> <corpus_name> <man_parser_output>
 
-	Ex: sh run_alignment.sh ENG HND physics 
+	Ex: sh run_alignment.sh ENG HND physics HND_parser_out
 
 	(NOTE: Where ENG and HND are parallel corpus one sentence per line )
 	       
