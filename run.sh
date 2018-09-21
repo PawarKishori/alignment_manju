@@ -1,5 +1,5 @@
 cp -r compile_prog.sh  $1 $2  $HOME_anu_test/miscellaneous/SMT/phrasal_alignment/
-cp  HINDI_POS_CHUNKER.tgz  $HOME_anu_test/miscellaneous/
+#cp  HINDI_POS_CHUNKER.tgz  $HOME_anu_test/miscellaneous/
 cd $HOME_anu_test/miscellaneous/
 tar -xvzf HINDI_POS_CHUNKER.tgz
 cd $HOME_anu_test/miscellaneous/HINDI_POS_CHUNKER
