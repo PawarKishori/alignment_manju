@@ -4,9 +4,7 @@
 Pre-requisite:
 ############
 1. anusaaraka need to be installed.
-2. rule based hindi parser need to be installed.
-	(Note: git clone anu_resources@10.2.62.172:/home/anu_resources/hindi-parser-repo/create-hindi-parser.git
-	       set the path in bashrc : export rule_based_parser=<path of hindi parser>)
+2. Irshad's hindi parser need to be installed.
 3. phrase tables (eng-hin and hin-eng)
 
 
