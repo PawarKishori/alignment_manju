@@ -1,12 +1,12 @@
-#Readme to create phrasal dictionaries and to run phrasal alignment:
+#Readme to Install Alignment and the dependencies
 ###################################################################
 
-Pre-requisite:
-############
+Pre-requisite for running alignment:
+####################################################################
 1. anusaaraka need to be installed.
 2. Irshad's hindi parser need to be installed.
-3. phrase tables (eng-hin and hin-eng)
-
+3. You should have phrase tables' files (eng-hin and hin-eng) if your domain is not general. 
+   (Take these files from Manju mam)
 
 Note:
 (phrasal data available for the following corpuses
@@ -17,6 +17,46 @@ Note:
 	Total_health		health
 )
 
+
+#STEP 1:: Installation of Anusaaraka : Install Anusaaraka from Readme provided ###########################################
+#STEP 2:: Installation of Irshad's Hindi Parser #########################################################################
+0. cd $HOME
+1. git clone https://github.com/PawarKishori/csnlp.git
+2. sudo apt-get install python-pip
+3. sudo pip install -r requirements.txt
+4. sudo pip install dynet
+5. git clone https://bitbucket.org/irshadbhat/nsdp-cs-models/src/c775772ec71639907771603c3071afe79e1382d9/PANINI/HI/PARSER
+6. go to PARSER/PANINI/HI/PARSER and extract bz2 file with bunzip2 *.bz2
+7. go to PARSER/UD/HI/PARSER and extract bz2 file with bunzip2 *.bz2
+8. set the path in bashrc :  export hindi_parser=<path for nsdp parser>
+     EX :  export hindi_parser=$HOME/csnlp
+
+        Run:
+        python mono_jm_parser.py --load <path-of-nsdp-parser>/PARSER/PANINI/HI/PARSER/hi-bist-parser --test <inputfile-name> --output-file <outfile-name>
+        Ex: python mono_jm_parser.py --load ~/hindi-parsers/csnlp/PARSER/PANINI/HI/PARSER/hi-bist-parser --test  test --output-file test_out
+
+#STEP 2.1:: ---------------------Installing Tokenizer which is integrated in above hindi parser ----------------------------------
+
+The tokenizer is added inside the csnlp(hindi_parser) directory, so a git inside git. Verify this add resolve if any issue.
+0. cd $hindi_parser
+1. git clone https://irshadbhat@bitbucket.org/iscnlp/tokenizer.git
+Build the tokenizer 
+2. cd tokenizer
+3. sudo python setup.py install
+
+#STEP 2.2[Optional]-------------------- Testing/Running Hindi Parser with integrated tokenizer --------------------------------------------------
+Condition: The input file to hindi parser should be in wx. 
+
+Syntax: 
+sh run_hindi_parser.sh <absolute_path_to_hindi_wx_file/hindi_wx_input> <output_file>
+
+Example:
+sh run_hindi_parser.sh /home/kishori/csnlp/hindi_wx /home/kishori/hindi_out.txt
+
+
+########################  RUNNING ALIGNMENT ##########################################################################################
+
+You need to create phrase dictionary for a specific domain once (first time) using run.sh and then run alignment using run_alignment.sh
 
 For first time:
 --------------
