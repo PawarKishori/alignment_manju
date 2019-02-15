@@ -68,15 +68,8 @@ Compilation:
 ------------
 1. cd $HOME_anu_test
 2. git pull
-3. shell_scripts/remove_out-files.sh
-4. shell_scripts/anu_compile.sh 
-5. cd $HOME_anu_test/miscellaneous/SMT/MINION/alignment 
-6. sh minion_compile.sh
-7. cd $HOME_anu_test/miscellaneous/SMT/phrasal_alignment
-8. sh compile.sh
-9. cd $rule_based_parser
-10. git pull
-11. compile.sh 
+3. sh phrase_compile.sh
+
 
 To run alignment:
 ----------------
