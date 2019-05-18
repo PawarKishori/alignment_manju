@@ -7,6 +7,8 @@ Pre-requisite for running alignment:
 2. Irshad's hindi parser need to be installed.
 3. You should have phrase tables' files (eng-hin and hin-eng) if your domain is not general. 
    (Take these files from Manju mam)
+4. HINDI_POS_CHUNKER.tgz should be copied in this dir.
+
 
 Note:
 (phrasal data available for the following corpuses
@@ -54,6 +56,7 @@ Note:
 	7.3 sudo python setup.py install (sudo apt-get install python-setuptools)
 
 
+8. Testing : Hindi parser run command
 
 	Run parser without tokenizer:
         python mono_jm_parser.py --load <path-of-csnlp-parser>/PARSER/PANINI/HI/PARSER/hi-bist-parser --test <inputfile-name> --output-file <outfile-name>
@@ -80,7 +83,8 @@ Compilation:
 ------------
 1. cd $HOME_anu_test
 2. git pull
-3. sh phrase_compile.sh
+3. cd alignment_manju
+4. sh phrase_compile.sh
 
 
 To run alignment:
