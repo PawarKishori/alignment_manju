@@ -90,7 +90,7 @@ Compilation:
 
 To run alignment:
 ----------------
-sh run_alignment.sh <ENG> <HND> <corpus_name> <man_parser_output>
+sh run_alignment.sh <ENG> <HND> <corpus_name> <hindi_parser_name>
 
 	Ex: sh run_alignment.sh ENG HND physics nsdp
 
