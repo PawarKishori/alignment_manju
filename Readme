@@ -23,15 +23,15 @@ Note:
 #STEP 1:: Installation of Anusaaraka : Install Anusaaraka from Readme provided ###########################################
 #STEP 2:: Installation of Irshad's Hindi Parser #########################################################################
 ************* Hindi Parser Installation *******************************************
-1. create python2.7 conda environment
-	conda create -n python2.7 python=2.7
-2. activate python2.7 environment
-	source activate python2.7
-3. clone the parser directory 
-	git clone https://github.com/PawarKishori/csnlp.git
-4. Setup the path in bash for csnlp
+1. Setup the path in bash for csnlp
 	export hindi_parser=path/to/csnlp
 	source ~/.bashrc
+2. create python2.7 conda environment
+	conda create -n python2.7 python=2.7
+3. activate python2.7 environment
+	source activate python2.7
+4. clone the parser directory 
+	git clone https://github.com/PawarKishori/csnlp.git
 5. go inside the directory.
 	cd csnlp
 6. Install the parser requirements, either using conda or pip, but in the same python directory in which environment is activated.
@@ -92,7 +92,7 @@ To run alignment:
 ----------------
 sh run_alignment.sh <ENG> <HND> <corpus_name> <man_parser_output>
 
-	Ex: sh run_alignment.sh ENG HND physics HND_parser_out
+	Ex: sh run_alignment.sh ENG HND physics nsdp
 
 	(NOTE: Where ENG and HND are parallel corpus one sentence per line )
 	       
