@@ -50,10 +50,11 @@ Note:
 		4) bunzip2 *.bz2
 
 7. Integrating tokenizer 
-	7.1 clone tokenizer
+	7.1 cd $hindi_parser 
+	7.2 clone tokenizer
 		git clone https://irshadbhat@bitbucket.org/iscnlp/tokenizer.git
-	7.2 cd tokenizer
-	7.3 sudo python setup.py install (sudo apt-get install python-setuptools)
+	7.3 cd tokenizer
+	7.4 sudo python setup.py install (sudo apt-get install python-setuptools)
 
 
 8. Testing : Hindi parser run command
