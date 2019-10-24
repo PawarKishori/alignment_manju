@@ -23,8 +23,8 @@ Note:
 #STEP 1:: Installation of Anusaaraka : Install Anusaaraka from Readme provided ###########################################
 #STEP 2:: Installation of Irshad's Hindi Parser #########################################################################
 ************* Hindi Parser Installation *******************************************
-1. Setup the path in bash for csnlp
-	export hindi_parser=path/to/csnlp
+1. Setup the path in bash for csnlp, for that copy following line at the enf of ~/.bashrc
+	export hindi_parser=<path...to ...csnlp folder>
 	source ~/.bashrc
 2. create python2.7 conda environment
 	conda create -n python2.7 python=2.7
